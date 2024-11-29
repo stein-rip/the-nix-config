@@ -21,8 +21,6 @@ in
     home = "/Users/${user}";
     isHidden = false;
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" ];
-    environment.variables.XDG_TERMINAL = "kitty";
   };
 
   homebrew = {

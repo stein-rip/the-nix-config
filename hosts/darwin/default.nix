@@ -86,8 +86,6 @@ let user = "stein"; in
 
       finder = {
         _FXShowPosixPathInTitle = false;
-        showHiddenFiles = true;
-        showStatusBar = true;
       };
 
       trackpad = {

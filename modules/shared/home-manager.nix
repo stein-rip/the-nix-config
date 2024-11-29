@@ -67,7 +67,7 @@ let name = "stein";
   git = {
     enable = true;
     ignores = [ "*.swp" ];
-    userName = name;
+    userName = "stein-rip";
     userEmail = email;
     lfs = {
       enable = true;
@@ -202,10 +202,10 @@ let name = "stein";
       };
 
       window = {
-        opacity = 1.0;
+        opacity = 0.02;
         padding = {
-          x = 24;
-          y = 24;
+          x = 22;
+          y = 22;
         };
       };
 
@@ -222,7 +222,7 @@ let name = "stein";
 
       dynamic_padding = true;
       decorations = "full";
-      title = "Terminal";
+      title = "tur-min-uhl";
       class = {
         instance = "Alacritty";
         general = "Alacritty";
@@ -274,7 +274,7 @@ let name = "stein";
         identitiesOnly = true;
         identityFile = [
           (lib.mkIf pkgs.stdenv.hostPlatform.isLinux
-            "/home/${user}/.ssh/id_github"
+            "/home/${user}/.ssh/id_"
           )
           (lib.mkIf pkgs.stdenv.hostPlatform.isDarwin
             "/Users/${user}/.ssh/id_github"

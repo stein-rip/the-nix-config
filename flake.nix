@@ -28,7 +28,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     secrets = {
-      url = "git+ssh://git@github.com/stein-rip/secrets.nix.git";
+      url = "git+ssh://git@github.com/stein-rip/nix-secrets.git";
       flake = false;
     };
   };

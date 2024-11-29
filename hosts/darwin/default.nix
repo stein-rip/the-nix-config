@@ -76,15 +76,18 @@ let user = "stein"; in
       };
 
       dock = {
-        autohide = false;
+        autohide = true;
         show-recents = false;
-        launchanim = true;
-        orientation = "bottom";
-        tilesize = 48;
+        launchanim = false;
+        orientation = "right";
+        tilesize = 25;
+        magnification = true;
       };
 
       finder = {
         _FXShowPosixPathInTitle = false;
+        showHiddenFiles = true;
+        showStatusBar = true;
       };
 
       trackpad = {

@@ -61,7 +61,6 @@ with pkgs; [
 
   # Stein additions
   lazydocker
-  nerdfonts
   ghfetch
   
 

@@ -43,4 +43,6 @@ shared-packages ++ [
   # Browsers
   freenet
 
+  #terms
+  xterm
 ]

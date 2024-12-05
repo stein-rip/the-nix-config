@@ -70,7 +70,7 @@
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=blue
 
   # Context format when root: user@host. The first part white, the rest grey.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%7F%n%f%007F@%m%f'
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%7F%u%f%007F@%m%f'
   # Context format when not root: user@host. The whole thing grey.
   typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%007F%n@%m%f'
   # Don't show context unless root or in SSH.

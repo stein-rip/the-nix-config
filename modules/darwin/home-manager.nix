@@ -23,10 +23,12 @@ in
     shell = pkgs.zsh;
   };
 
+  security.pam.enableSudoTouchIdAuth = true;
+
   homebrew = {
     enable = true;
     casks = pkgs.callPackage ./casks.nix {};
-    # onActivation.cleanup = "uninstall";
+    onActivation.cleanup = "uninstall";
 
     # These app IDs are from using the mas CLI app
     # mas = mac app store
@@ -75,22 +77,22 @@ in
       entries = [
         # { path = "/Applications/Slack.app/"; }
         { path = "${pkgs.alacritty}/Applications/Alacritty.app/"; }
-	{ path = "${pkgs.alacritty}/Applications/Alacritty.app/"; }
+	{ path = "${pkgs.kitty}/Applications/Kitty.app/"; }
         # { path = "/System/Applications/"; }
         {
-          path = toString myEmacsLauncher;
-          section = "others";
+          path = "/Applications/ myEmacsLauncher";
+        #  section = "emacsss";
         }
-        {
-          path = "${config.users.users.${user}.home}/.local/share/";
-          section = "others";
-          options = "--sort name --view grid --display folder";
-        }
-        {
-          path = "${config.users.users.${user}.home}/.local/share/downloads";
-          section = "others";
-          options = "--sort name --view grid --display stack";
-        }
+        # {
+        #  path = "${config.users.users.${user}.home}/.local/share/";
+        #  section = "others";
+        #  options = "--sort name --view grid --display folder";
+        # }
+        # {
+        #  path = "${config.users.users.${user}.home}/.local/share/downloads";
+        #  section = "others";
+        #  options = "--sort name --view grid --display stack";
+        # }
       ];
     };
   };

@@ -13,14 +13,14 @@ let
       #!/bin/zsh
       #
       # Required parameters:
-      # @raycast.schemaVersion 1
-      # @raycast.title Run Emacs
-      # @raycast.mode silent
-      #
-      # Optional parameters:
-      # @raycast.packageName Emacs
-      # @raycast.icon ${xdg_dataHome}/img/icons/Emacs.icns
-      # @raycast.iconDark ${xdg_dataHome}/img/icons/Emacs.icns
+        @raycast.schemaVersion 1
+        @raycast.title Run Emacs
+        @raycast.mode silent
+      
+       # Optional parameters:
+        @raycast.packageName Emacs
+        @raycast.icon ${xdg_dataHome}/img/icons/Emacs.icns
+        @raycast.iconDark ${xdg_dataHome}/img/icons/Emacs.icns
 
       if [[ $1 = "-t" ]]; then
         # Terminal mode

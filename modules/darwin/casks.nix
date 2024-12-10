@@ -5,8 +5,13 @@ _:
   "homebrew/cask/docker"
   "visual-studio-code"
   # "python-tk"
+
+  # Word-Processing 
+  "microsoft-powerpoint"
+  "bettercap"
+  "httpflow"
  
- # Communication Tools
+  # Communication Tools
   "discord"
   "notion"
   "slack"

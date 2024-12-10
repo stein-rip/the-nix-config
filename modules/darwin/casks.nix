@@ -34,7 +34,7 @@ _:
   # "usbmuxd"
   # "john"
   # "micro"
-  "wireshark-chmodbpf"
+  # "wireshark-cli"
   "macvim"
   # "v8"
   # "nikto"
@@ -53,6 +53,9 @@ _:
   # "tk"
 
   # Entertainment Tools
+
+  # Chat
+  "bitchx"
   
 
   # Productivity Tools

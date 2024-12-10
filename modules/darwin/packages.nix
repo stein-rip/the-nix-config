@@ -13,9 +13,32 @@ shared-packages ++ [
   ghidra
   loramon
   photon
+  wuz
+  holehe
+  bandwhich
+  testssl
+  nexttrace
+
+
+
 
   # VPN
   dsvpn
+  #geph.cli
+
+  # Cli tools
+  usage
+  safe
+  halp
+  zdns
+  oui
+  mole
+  termshark
+  emptty
+  asitop
+  nixtract
+
+
 
   # Cli Toys
   pokemon-colorscripts-mac
@@ -26,10 +49,40 @@ shared-packages ++ [
   mommy
   rpg-cli
   fortune
+  chatgpt-cli
+  talecast
+  shaq
+  s3bro
+  gif-for-cli
+  harsh
+  gh-contribs
+  coinlive
+  twitch-cli
+  sssnake
+  ponysay
+  pokemonsay
+  round
+  neocities
+  inxi
+  peertube-viewer
+  grb
+  cht-sh
 
+  # Art
+  artem
+
+
+
+
+  
   # Development
   postman
   esphome 
+  surge-cli
+  stc-cli
+  bruno-cli
+  pb-cli
+
 
   # Custo
   yabai
@@ -43,6 +96,6 @@ shared-packages ++ [
   # Browsers
   freenet
 
-  #terms
-  xterm
+  # terms
+  # xterm
 ]

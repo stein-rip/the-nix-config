@@ -46,10 +46,10 @@
         default = with pkgs; mkShell {
           nativeBuildInputs = [
             bashInteractive
-            zsh-edits
+            # zsh-edits
             # git
-            pkg.python3Full  # Includes Python
-            pkg.tk           # Adds tkinter for GUI programs
+            # pkg.python3Full  # Includes Python
+            # pkg.tk           # Adds tkinter for GUI programs
           ];
 
           shellHook = ''

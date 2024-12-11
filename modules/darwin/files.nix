@@ -10,8 +10,8 @@ let
   "${xdg_dataHome}/bin/emacsclient" = {
     executable = true;
     text = ''
-      #!/bin/zsh
-      #
+      !/bin/zsh
+      
       # Required parameters:
         @raycast.schemaVersion 1
         @raycast.title Run Emacs

@@ -14,10 +14,10 @@ shared-packages ++ [
   loramon
   photon
   # wuz
-  holehe
-  bandwhich
-  testssl
-  nexttrace
+ # holehe
+ # bandwhich
+ # testssl
+ # nexttrace
 
 
 
@@ -27,15 +27,15 @@ shared-packages ++ [
   #geph.cli
 
   # Cli tools
-  usage
-  safe
-  halp
-  zdns
-  oui
-  mole
+ # usage
+ # safe
+ # halp
+ # zdns
+ # oui
+ # mole
   termshark
   # emptty
-  asitop
+ # asitop
   # nixtract
 
 
@@ -49,27 +49,27 @@ shared-packages ++ [
   mommy
   rpg-cli
   fortune
-  chatgpt-cli
-  talecast
-  shaq
-  s3bro
-  gif-for-cli
-  harsh
-  gh-contribs
-  coinlive
-  twitch-cli
-  sssnake
-  ponysay
-  pokemonsay
-  round
-  neocities
-  inxi
-  peertube-viewer
-  grb
-  cht-sh
+#  chatgpt-cli
+#  talecast
+#  shaq
+#  s3bro
+#  gif-for-cli
+#  harsh
+#  gh-contribs
+#  coinlive
+#  twitch-cli
+#  sssnake
+#  ponysay
+#  pokemonsay
+#  round
+# neocities
+#  inxi
+#  peertube-viewer
+#  grb
+#  cht-sh
 
   # Art
-  artem
+ # artem
 
 
 

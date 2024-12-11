@@ -77,7 +77,7 @@ EOF
 
   # Find the start and end line numbers of the 'disko' block
   START_LINE=$(grep -n 'disko = {' "$FILE_PATH" | head -n 1 | cut -d: -f1)
-  END_LINE=$(tail -n +$START_LINE "$FILE_PATH" | grep -n '};' | head -n 1 | cut -d: -f1)
+  END_LINE=$(tail -n + $START_LINE "$FILE_PATH" | grep -n '};' | head -n 1 | cut -d: -f1)
   END_LINE=$((START_LINE + END_LINE - 1))
 
   # Create a new file with the insertion

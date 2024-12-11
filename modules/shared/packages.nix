@@ -61,8 +61,5 @@ with pkgs; [
 
   # Stein additions
   lazydocker
-  ghfetch
-  
-
-
 ]
+  

@@ -23,12 +23,10 @@ in
     shell = pkgs.zsh;
   };
 
-  security.pam.enableSudoTouchIdAuth = true;
-
   homebrew = {
     enable = true;
     casks = pkgs.callPackage ./casks.nix {};
-    onActivation.cleanup = "uninstall";
+    # onActivation.cleanup = "uninstall";
 
     # These app IDs are from using the mas CLI app
     # mas = mac app store
@@ -41,10 +39,10 @@ in
     # you may receive an error message "Redownload Unavailable with This Apple ID".
     # This message is safe to ignore. (https://github.com/dustinlyons/nixos-config/issues/83)
 
- #   masApps = {
- #     "1password" = 1333542190;
- #     "wireguard" = 1451685025;
- #   };
+    masApps = {
+      "1password" = 1333542190;
+      "wireguard" = 1451685025;
+    };
   };
 
   # Enable home-manager
@@ -75,24 +73,23 @@ in
     dock = {
       enable = true;
       entries = [
-        # { path = "/Applications/Slack.app/"; }
+
         { path = "${pkgs.alacritty}/Applications/Alacritty.app/"; }
-	{ path = "${pkgs.kitty}/Applications/Kitty.app/"; }
-        # { path = "/System/Applications/"; }
+ 
         {
-          path = "/Applications/ myEmacsLauncher";
-        #  section = "emacsss";
+          path = toString myEmacsLauncher;
+          section = "others";
         }
-        # {
-        #  path = "${config.users.users.${user}.home}/.local/share/";
-        #  section = "others";
-        #  options = "--sort name --view grid --display folder";
-        # }
-        # {
-        #  path = "${config.users.users.${user}.home}/.local/share/downloads";
-        #  section = "others";
-        #  options = "--sort name --view grid --display stack";
-        # }
+        {
+          path = "${config.users.users.${user}.home}/.local/share/";
+          section = "others";
+          options = "--sort name --view grid --display folder";
+        }
+        {
+          path = "${config.users.users.${user}.home}/.local/share/downloads/";
+          section = "others";
+          options = "--sort name --view grid --display stack";
+        }
       ];
     };
   };

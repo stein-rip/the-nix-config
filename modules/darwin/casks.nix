@@ -65,7 +65,7 @@ _:
   # "socat"
   # "bower"
   # "scipy"
-  #v"homebrew/taps/haskell-stack"
+  # "homebrew/taps/haskell-stack"
   # "homebrew/formulae/asciinema"
   # "homebrew/formulae/ranger"
 
@@ -79,3 +79,4 @@ _:
   "homebrew/cask/firefox"
 
 ]
+

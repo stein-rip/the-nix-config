@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 
-let name = "stein";
+let name = "stein-rip";
     user = "stein";
     email = "stein@stein.rip"; in
 {
@@ -67,7 +67,7 @@ let name = "stein";
   git = {
     enable = true;
     ignores = [ "*.swp" ];
-    userName = "stein-rip";
+    userName = name;
     userEmail = email;
     lfs = {
       enable = true;
@@ -86,7 +86,7 @@ let name = "stein";
 
   vim = {
     enable = true;
-    plugins = with pkgs.vimPlugins; [vim-airline vim-airline-themes vim-startify vim-tmux-navigator ];
+    plugins = with pkgs.vimPlugins; [ vim-airline vim-airline-themes vim-startify vim-tmux-navigator ];
     settings = { ignorecase = true; };
     extraConfig = ''
       "" General
@@ -134,7 +134,7 @@ let name = "stein";
       set nocompatible " Disable vi-compatibility
       set laststatus=2 " Always show the statusline
       let g:airline_theme='bubblegum'
-      let g:airline_powerline_fonts = 0
+      let g:airline_powerline_fonts = 1
 
       "" Local keys and such
       let mapleader=","
@@ -188,6 +188,9 @@ let name = "stein";
       let g:startify_bookmarks = [
         \ '~/.local/share/src',
         \ ]
+
+      let g:airline_theme='bubblegum'
+      let g:airline_powerline_fonts = 1
       '';
      };
 
@@ -196,36 +199,66 @@ let name = "stein";
     settings = {
       cursor = {
         style = "Block";
-        font.family = "JetBrains Mono";
       };
-      
-  colors.bright = {
-  black = "0x65737e";
-  blue = "0x6699cc";
-  cyan = "0x5fb3b3";
-  green = "0x99c794";
-  magenta = "0xc594c5";
-  red = "0xec5f67";
-  white = "0xd8dee9";
-  yellow = "0xfac863";
-  };
-  colors.normal = {
-  black = "0x1f2528";
-  blue = "0x6699cc";
-  cyan = "0x5fb3b3";
-  green = "0x99c794";
-  magenta = "0xc594c5";
-  red = "0xec5f67";
-  white = "0xc0c5ce";
-  yellow = "0xfac863";
-  };
-  colors.primary = {
-  background = "0x1f2528";
-  foreground = "0xc0c5ce";
-  };
+
+      window = {
+        opacity = 1.0;
+        padding = {
+          x = 24;
+          y = 24;
+        };
+      };
+
+      font = {
+        normal = {
+          family = "MesloLGS NF";
+          style = "Regular";
+        };
+        size = lib.mkMerge [
+          (lib.mkIf pkgs.stdenv.hostPlatform.isLinux 10)
+          (lib.mkIf pkgs.stdenv.hostPlatform.isDarwin 14)
+        ];
+      };
+
+      dynamic_padding = true;
+      decorations = "full";
+      title = "Terminal";
+      class = {
+        instance = "Alacritty";
+        general = "Alacritty";
+      };
+
+      colors = {
+        primary = {
+          background = "0x1f2528";
+          foreground = "0xc0c5ce";
+        };
+
+        normal = {
+          black = "0x1f2528";
+          red = "0xec5f67";
+          green = "0x99c794";
+          yellow = "0xfac863";
+          blue = "0x6699cc";
+          magenta = "0xc594c5";
+          cyan = "0x5fb3b3";
+          white = "0xc0c5ce";
+        };
+
+        bright = {
+          black = "0x65737e";
+          red = "0xec5f67";
+          green = "0x99c794";
+          yellow = "0xfac863";
+          blue = "0x6699cc";
+          magenta = "0xc594c5";
+          cyan = "0x5fb3b3";
+          white = "0xd8dee9";
+        };
+      };
     };
-    };
-    
+  };
+
   ssh = {
     enable = true;
     includes = [
@@ -241,7 +274,7 @@ let name = "stein";
         identitiesOnly = true;
         identityFile = [
           (lib.mkIf pkgs.stdenv.hostPlatform.isLinux
-            "/home/${user}/.ssh/id_"
+            "/home/${user}/.ssh/id_github"
           )
           (lib.mkIf pkgs.stdenv.hostPlatform.isDarwin
             "/Users/${user}/.ssh/id_github"

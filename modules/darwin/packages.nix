@@ -13,7 +13,7 @@ shared-packages ++ [
   ghidra
   loramon
   photon
-  wuz
+  # wuz
   holehe
   bandwhich
   testssl
@@ -34,9 +34,9 @@ shared-packages ++ [
   oui
   mole
   termshark
-  emptty
+  # emptty
   asitop
-  nixtract
+  # nixtract
 
 
 
@@ -81,7 +81,7 @@ shared-packages ++ [
   surge-cli
   stc-cli
   bruno-cli
-  pb-cli
+  # pb-cli
 
 
   # Custo

@@ -46,7 +46,7 @@ _:
   # "lolcat"
   # "mercurial"
   # "moreutils"
-  # "thefuck"
+  # "thefuck"`
   # "weechat"
   # "tesseract"
   # "jq"

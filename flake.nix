@@ -46,16 +46,7 @@
         default = with pkgs; mkShell {
           nativeBuildInputs = [
             bashInteractive
-            # zsh-edits
-            # git
-            # pkg.python3Full  # Includes Python
-            # pkg.tk           # Adds tkinter for GUI programs
           ];
-
-          shellHook = ''
-            export EDITOR=vim
-            echo "Welcome to the development shell for Python OOP programs!"
-          '';
         };
       };
 

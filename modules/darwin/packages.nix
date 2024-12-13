@@ -9,7 +9,6 @@ shared-packages ++ [
   cherrytree
 
   # Recon
-  wireshark
   ghidra
   loramon
   photon

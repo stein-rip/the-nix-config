@@ -8,8 +8,8 @@ _:
 
   # Word-Processing 
   "microsoft-powerpoint"
-  "bettercap"
-  "httpflow"
+ #v "bettercap"
+ # "httpflow"
  
   # Communication Tools
   "discord"
@@ -55,7 +55,7 @@ _:
   # Entertainment Tools
 
   # Chat
-  "bitchx"
+ # "bitchx"
   
 
   # Productivity Tools

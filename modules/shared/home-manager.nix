@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 
-let name = "stein-rip";
+let name = "stein";
     user = "stein";
     email = "stein@stein.rip"; in
 {

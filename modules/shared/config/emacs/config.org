@@ -16,7 +16,7 @@ Just me!
 
 #+NAME: personal-info
 #+BEGIN_SRC emacs-lisp
-  (setq user-full-name "stein-rip"
+  (setq user-full-name "stein"
     user-mail-address "stein@stein.rip")
 #+END_SRC
 

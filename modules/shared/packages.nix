@@ -58,8 +58,4 @@ with pkgs; [
   # Python packages
   python3
   virtualenv
-
-  # Stein additions
-  lazydocker
 ]
-  

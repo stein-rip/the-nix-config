@@ -67,8 +67,8 @@ let name = "stein";
   git = {
     enable = true;
     ignores = [ "*.swp" ];
-    userName = name;
-    userEmail = email;
+    userName = stein-rip;
+    userEmail = stein@stein.rip;
     lfs = {
       enable = true;
     };

@@ -28,15 +28,19 @@ let name = "stein";
       fi
 
       # Define variables for directories
-      export PATH=$HOME/.pnpm-packages/bin:$HOME/.pnpm-packages:$PATH
-      export PATH=$HOME/.npm-packages/bin:$HOME/bin:$PATH
-      export PATH=$HOME/.local/share/bin:$PATH
-
+export PATH=$HOME/.pnpm-packages/bin:$HOME/.pnpm-packages:$HOME/.npm-packages/bin:$HOME/bin:$HOME/.local/share/bin:$HOME/sw/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
       # Remove history data we don't want to see
       export HISTIGNORE="pwd:ls:cd"
 
       # Ripgrep alias
       alias search=rg -p --glob '!node_modules/*'  $@
+      alias ll='ls -la'
+alias gs='git status'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git log'
+alias ..='cd ..'
+alias ...='cd ../..'
 
       # Emacs is my editor
       export ALTERNATE_EDITOR=""
@@ -202,7 +206,7 @@ let name = "stein";
       };
 
       window = {
-        opacity = 1.0;
+        opacity = 0.3;
         padding = {
           x = 24;
           y = 24;
@@ -211,21 +215,13 @@ let name = "stein";
 
       font = {
         normal = {
-          family = "MesloLGS NF";
+          family = "udev-gothic";
           style = "Regular";
         };
         size = lib.mkMerge [
           (lib.mkIf pkgs.stdenv.hostPlatform.isLinux 10)
           (lib.mkIf pkgs.stdenv.hostPlatform.isDarwin 14)
         ];
-      };
-
-      dynamic_padding = true;
-      decorations = "full";
-      title = "Terminal";
-      class = {
-        instance = "Alacritty";
-        general = "Alacritty";
       };
 
       colors = {

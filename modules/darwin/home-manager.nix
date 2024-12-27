@@ -16,9 +16,9 @@ in
   ];
 
   # It me
-  users.users.${user} = {
-    name = "${user}";
-    home = "/Users/${user}";
+  users.users.stein = {
+    name = "stein";
+    home = "/Users/stein";
     isHidden = false;
     shell = pkgs.zsh;
   };
@@ -26,7 +26,7 @@ in
   homebrew = {
     enable = true;
     casks = pkgs.callPackage ./casks.nix {};
-    # onActivation.cleanup = "uninstall";
+    onActivation.cleanup = "uninstall";
 
     # These app IDs are from using the mas CLI app
     # mas = mac app store
@@ -73,20 +73,7 @@ in
       enable = true;
       entries = [
         { path = "${pkgs.alacritty}/Applications/Alacritty.app/"; }
-        {
-          path = toString myEmacsLauncher;
-          section = "others";
-        }
-        {
-          path = "${config.users.users.${user}.home}/.local/share/";
-          section = "others";
-          options = "--sort name --view grid --display folder";
-        }
-        {
-          path = "${config.users.users.${user}.home}/.local/share/downloads";
-          section = "others";
-          options = "--sort name --view grid --display stack";
-        }
+
       ];
     };
   };

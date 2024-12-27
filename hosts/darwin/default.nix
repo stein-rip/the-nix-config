@@ -27,7 +27,7 @@ let user = "stein"; in
       user = "root";
       automatic = true;
       interval = { Weekday = 0; Hour = 2; Minute = 0; };
-      options = "--delete-older-than 30d";
+      options = "--delete-older-than 1d";
     };
 
     extraOptions = ''
@@ -42,6 +42,7 @@ let user = "stein"; in
   environment.systemPackages = with pkgs; [
     emacs-unstable
     agenix.packages."${pkgs.system}".default
+    
   ] ++ (import ../../modules/shared/packages.nix { inherit pkgs; });
 
   launchd.user.agents.emacs.path = [ config.environment.systemPath ];
@@ -79,8 +80,8 @@ let user = "stein"; in
         autohide = false;
         show-recents = false;
         launchanim = true;
-        orientation = "bottom";
-        tilesize = 48;
+        orientation = "right";
+        tilesize = 28;
       };
 
       finder = {

@@ -36,6 +36,10 @@ with pkgs; [
   noto-fonts
   noto-fonts-emoji
   meslo-lgs-nf
+  jetbrains-mono
+  nerdfetch
+  udev-gothic
+
 
   # Node.js development tools
   nodePackages.npm # globally install npm
@@ -58,4 +62,8 @@ with pkgs; [
   # Python packages
   python3
   virtualenv
+
+  # tiptoe
+  # ledger-live-desktop
+  
 ]

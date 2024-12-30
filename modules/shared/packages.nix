@@ -36,9 +36,17 @@ with pkgs; [
   noto-fonts
   noto-fonts-emoji
   meslo-lgs-nf
-  jetbrains-mono
+  nerd-fonts.jetbrains-mono
   nerdfetch
-  udev-gothic
+  gping
+  starfetch
+  ghfetch
+  pokemon-colorscripts-mac
+  krabby
+  vencord-web-extension
+  magic-wormhole-rs
+  digital
+
 
 
   # Node.js development tools

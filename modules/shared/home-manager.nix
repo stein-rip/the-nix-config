@@ -215,7 +215,7 @@ alias ...='cd ../..'
 
       font = {
         normal = {
-          family = "udev-gothic";
+          family = "JetBrainsMono Nerd Font Propo";
           style = "Regular";
         };
         size = lib.mkMerge [
